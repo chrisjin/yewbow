@@ -23,4 +23,4 @@ private:\
 				}
 
 #define yb_vsprintf vsprintf_s 
-#define yb_fopen    fopen_s  sadsd
+#define yb_fopen    fopen_s 

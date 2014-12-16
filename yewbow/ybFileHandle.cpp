@@ -28,10 +28,12 @@ void FileHandle::Close()
 bool FileHandle::Write(tByte* bytearr, int num)
 {
 	fwrite(bytearr,1,num,fp);
+	return true;
 }
 bool FileHandle::Read(tByte* buffer, int num)
 {
 	fread(buffer, 1, num, fp);
+	return true;
 }
 
 NS_YB_END
