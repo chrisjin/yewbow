@@ -27,6 +27,20 @@ int Image::_get_pixel_bytes()
 	switch (_format)
 	{
 	case RGB:
+		return 3;
+	case RGBA:
+		return 4;
+		break;
+	default:
+		DebugMessage("Not Supported\n!");
+		return 0;
+	}
+}
+int Image::_get_pixel_bits()
+{
+	switch (_format)
+	{
+	case RGB:
 		return 24;
 	case RGBA:
 		return 32;
@@ -36,15 +50,15 @@ int Image::_get_pixel_bytes()
 		return 0;
 	}
 }
-
 void  Image::_eval_all()
 {
+	_bytes_per_pixel = _get_pixel_bytes();
 	int linenum = _bytes_per_pixel*_width;
 	int remainder = linenum%_padding;
 	_bytes_per_line = remainder ? linenum + _padding - remainder : linenum;
 	_bytes_per_img = _bytes_per_line*_width;
-	_bytes_per_pixel = _get_pixel_bytes();
-	
+
+	_bits_per_pixel = _get_pixel_bits();
 }
 
 void Image::_init()

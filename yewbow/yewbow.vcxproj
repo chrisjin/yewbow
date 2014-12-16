@@ -78,7 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BMPImageIO.cpp" />
+    <ClCompile Include="ybBMPImageIO.cpp" />
     <ClCompile Include="ybFileHandle.cpp" />
     <ClCompile Include="ybImageIOManager.cpp" />
     <ClCompile Include="ybImageIterator.cpp" />

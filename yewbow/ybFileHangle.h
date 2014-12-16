@@ -9,8 +9,8 @@ public:
 	bool Create(const char* name);
 	bool Append(const char* name);
 	void Close();
-	bool Write(tByte* bytearr, int num);
-	bool Read(tByte* buffer, int num);
+	bool Write(void* bytearr, int num);
+	bool Read(void* buffer, int num);
 private:
 	FILE* fp;
 };

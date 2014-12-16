@@ -36,7 +36,7 @@
     <ClCompile Include="ybFileHandle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BMPImageIO.cpp">
+    <ClCompile Include="ybBMPImageIO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

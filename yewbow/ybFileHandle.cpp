@@ -25,15 +25,17 @@ void FileHandle::Close()
 {
 	fclose(fp);
 }
-bool FileHandle::Write(tByte* bytearr, int num)
+bool FileHandle::Write(void* bytearr, int num)
 {
-	fwrite(bytearr,1,num,fp);
-	return true;
+	if(num==fwrite(bytearr,1,num,fp))
+		return true;
+	return false;
 }
-bool FileHandle::Read(tByte* buffer, int num)
+bool FileHandle::Read(void* buffer, int num)
 {
-	fread(buffer, 1, num, fp);
-	return true;
+	if (num == fread(buffer, 1, num, fp))
+		return true;
+	return false;
 }
 
 NS_YB_END

@@ -25,16 +25,23 @@ public:
 	int Width(){ return _width; }
 	int Height(){ return _height; }
 	int PixelFormat(){ return _format; }
+	int BytesPerLine(){ return _bytes_per_line; }
+	int BytesPerImage(){ return _bytes_per_img; }
+	int BytesPerPixel(){ return _bytes_per_pixel; }
+	int BitsPerPixel(){ return _bits_per_pixel; }
+	tByte* Buffer(){ return _buffer; }
 private:
 
 	void _init();
 	int _get_pixel_bytes();
+	int _get_pixel_bits();
 	void _eval_all();
 
 	int _bytes_per_img;
 	int _bytes_per_line;
 	int _bytes_per_pixel;
 
+	int _bits_per_pixel;
 	tByte* _buffer;
 	tByte* _palette;
 
