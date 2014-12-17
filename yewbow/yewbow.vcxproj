@@ -85,10 +85,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ybDebug.cpp" />
     <ClCompile Include="ybImage.cpp" />
+    <ClCompile Include="ybMath.cpp" />
     <ClCompile Include="ybMemory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ybBMPImageIO.h" />
+    <ClInclude Include="ybBuffer2D.h" />
     <ClInclude Include="ybFileHangle.h" />
     <ClInclude Include="ybImageIOManager.h" />
     <ClInclude Include="ybImageIterator.h" />
@@ -98,7 +100,10 @@
     <ClInclude Include="ybDebug.h" />
     <ClInclude Include="ybImage.h" />
     <ClInclude Include="ybImageIO.h" />
+    <ClInclude Include="ybMath.h" />
+    <ClInclude Include="ybMatrix.h" />
     <ClInclude Include="ybMemory.h" />
+    <ClInclude Include="ybVector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
